@@ -1,3 +1,13 @@
 .invisible {
     display: none;
 }
+
+.btn {
+  cursor: pointer;
+  padding: 0.2em 0.6em;
+  margin-top: 0.4em;
+}
+
+.tagInput {
+  padding: 0.2em;
+}
