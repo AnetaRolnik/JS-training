@@ -159,11 +159,6 @@
     font-size: 20px;
 }
 
-.page-nav-list li:hover .page-nav-sublist {
-    opacity: 1;
-    visibility: visible;
-}
-
 .page-nav-sublist:before {
     content: "";
     height: 20px;
