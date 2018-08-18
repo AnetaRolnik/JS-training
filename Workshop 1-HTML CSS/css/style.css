@@ -277,6 +277,11 @@
     width: 150%;
 }
 
+.second-img {
+    width: 390px;
+    height: auto;
+}
+
 .banner-slide-cnt {
     top: -30px;
     position: relative;

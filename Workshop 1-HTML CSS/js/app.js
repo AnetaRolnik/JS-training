@@ -42,5 +42,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
+    //Slider in section with banner
+    var prevBtn= document.querySelector(".banner-prev");
+    var nextBtn= document.querySelector(".banner-next");
+    var bannerSlide = document.querySelectorAll(".banner-slide");
+
+    nextBtn.addEventListener("click", function(){
+      console.log(bannerSlide[0].className.indexOf("banner--slide--active"));
+        if (bannerSlide[0].className.indexOf("banner--slide--active") != -1) {
+            bannerSlide[0].classList.remove("banner--slide--active");
+            bannerSlide[1].classList.add("banner--slide--active");
+        } else {
+            bannerSlide[1].classList.remove("banner--slide--active");
+            bannerSlide[0].classList.add("banner--slide--active");
+        }
+    })
+
+    prevBtn.addEventListener("click", function(){
+      if (bannerSlide[0].className.indexOf("banner--slide--active") != -1) {
+          bannerSlide[0].classList.remove("banner--slide--active");
+          bannerSlide[1].classList.add("banner--slide--active");
+      } else {
+          bannerSlide[1].classList.remove("banner--slide--active");
+          bannerSlide[0].classList.add("banner--slide--active");
+      }
+
+    })
+
 
 })
