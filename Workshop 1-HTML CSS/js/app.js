@@ -69,5 +69,31 @@ document.addEventListener("DOMContentLoaded", function(){
 
     })
 
+  //Calculator
+    var listArrow = document.querySelectorAll(".list_arrow");
+
+    for (var i=0; i<listArrow.length; i++) {
+        listArrow[i].addEventListener("click", function(){
+            var listPanel = this.nextElementSibling;
+            var listLabel = this.previousElementSibling;
+
+            if (listPanel.style.display != "block") {
+                listPanel.style.display = "block";
+                var listPanelElements = listPanel.querySelectorAll("li");
+
+                for (var j=0; j<listPanelElements.length; j++) {
+                    listPanelElements[j].addEventListener("click", function(){
+                        listLabel.innerText = this.innerText;
+                        listLabel.style.color = "#24BAA0";
+                        listPanel.style.display = "none";
+                    })
+                }
+
+            } else {
+                listPanel.style.display = "none";
+            }
+
+        })
+    }
 
 })
