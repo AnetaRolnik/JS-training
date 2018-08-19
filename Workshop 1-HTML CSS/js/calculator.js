@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function(){
     var transportPrice = document.querySelector(".panel_right").querySelector(".transport");
 
     checkTransport.addEventListener("click", function() {
+        var transportVal = checkTransport.dataset.price;
 
         if (checkTransport.checked === true) {
             transport.innerText = "Transport";
-            var transportVal = checkTransport.dataset.price;
             transportPrice.innerText = transportVal;
             totalPrice += parseInt(transportVal);
             sum.innerText = totalPrice;
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
             transport.innerText = " ";
             transportPrice.innerText = " ";
-            totalPrice = 0;
+            totalPrice -= parseInt(transportVal);
             sum.innerText = totalPrice;
         }
 
